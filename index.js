@@ -63,7 +63,7 @@ module.exports = function loader(content) {
               img
               .clone()
               .resize(width, null)
-              .jpeg({quality: quality})
+              .jpeg({quality: quality, force: false})
               .background(background)
               .toBuffer()
               .then((buf) => {
